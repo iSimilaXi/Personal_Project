@@ -63,7 +63,8 @@ FROM ListofbestsellingPlayStation4videogames
 GROUP BY publisher
 ORDER BY Average_Sales, Total_Sales DESC;
 
--- 4. sales for each year, best year for gaming (sell-wise)
+-- 4. best year for gaming (sell-wise)
+-- could skew favorably to older games that released in early years of PS4.
 SELECT year_released,
 		SUM(copies_sold) AS sales
 FROM ListofbestsellingPlayStation4videogames
